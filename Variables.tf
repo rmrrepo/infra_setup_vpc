@@ -4,11 +4,17 @@ variable "vpc_cidr" {
     default = "10.10.0.0/16"  
 }
 
-variable "subnet_cidr" {
+variable "subnet_public_cidr" {
     description = "subnet cidr"
     type = string
-    default = "10.10.10.0/27"  
+    default = "10.10.1.0/24"  
 }
+variable "subnet_private_cidr" {
+    description = "subnet cidr"
+    type = string
+    default = "10.10.2.0/24"  
+}
+
 
 variable "region" {
     description = "region"
@@ -19,11 +25,16 @@ variable "region" {
 variable "vpcname" {
     description = "vpc tag name"
     type = string
-    default = "vpc_main"  
+    default = "Demo_VPC"  
 }
 
-variable "subnetname" {
+variable "subnetname_public" {
     description = "subnet tag name"
     type = string
-    default = "subnet_main"  
+    default = "subnet_public"  
+}
+variable "subnetname_private" {
+    description = "subnet tag name"
+    type = string
+    default = "subnet_private"  
 }
